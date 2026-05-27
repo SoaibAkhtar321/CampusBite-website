@@ -1,109 +1,96 @@
-import Layout from '../components/Layout';
-
-function Section({ title, children }) {
-  return (
-    <div className="mb-8">
-      <h2 className="font-heading text-xl font-bold text-gray-900 mb-3">{title}</h2>
-      <div className="text-gray-600 leading-relaxed space-y-3">{children}</div>
-    </div>
-  );
-}
+import LegalPage from "../components/LegalPage";
 
 export default function PrivacyPolicy() {
   return (
-    <Layout
-      title="Privacy Policy – CampusBite"
-      description="CampusBite's privacy policy explains how we collect, use, and protect your personal information."
-    >
-      <div className="min-h-screen bg-gray-50 pt-24 pb-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12">
-            {/* Header */}
-            <div className="mb-10 pb-8 border-b border-gray-100">
-              <div className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                Legal
-              </div>
-              <h1 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Privacy Policy</h1>
-              <p className="text-sm text-gray-400">Last updated: June 2025</p>
-            </div>
-
-            <Section title="1. Introduction">
-              <p>
-                Welcome to CampusBite ("we," "our," or "us"). CampusBite is a smart dining and queue management platform for closed-campus ecosystems. This Privacy Policy explains how we collect, use, and protect your personal information when you use our application or services.
-              </p>
-              <p>
-                By using CampusBite, you agree to the collection and use of information in accordance with this policy.
-              </p>
-            </Section>
-
-            <Section title="2. Information We Collect">
-              <p>We may collect the following types of information when you register or use CampusBite:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li><strong>Personal Information:</strong> Your name, email address, and phone number when you create an account.</li>
-                <li><strong>Order Details:</strong> Information about food orders you place, including outlet name, items ordered, order time, and pickup slot.</li>
-                <li><strong>Payment Information:</strong> If applicable, payment confirmation details such as a payment screenshot or UTR (Unique Transaction Reference) number for QR-based UPI payments. We do not store full payment card details.</li>
-                <li><strong>Device Information:</strong> Basic device type and operating system information for app compatibility purposes.</li>
-                <li><strong>Usage Data:</strong> How you interact with the app, including pages visited and features used, to improve our service.</li>
-              </ul>
-            </Section>
-
-            <Section title="3. How We Use Your Information">
-              <p>The information we collect is used solely for the following purposes:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>Processing and fulfilling your food orders</li>
-                <li>Sending order status updates and notifications</li>
-                <li>Verifying payments where required</li>
-                <li>Providing customer support and resolving disputes</li>
-                <li>Improving our platform, features, and user experience</li>
-                <li>Communicating service-related updates</li>
-              </ul>
-              <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
-            </Section>
-
-            <Section title="4. Firebase & Technology Stack">
-              <p>
-                CampusBite uses <strong>Google Firebase</strong> for authentication (Firebase Auth), database management (Firestore), and cloud storage. Your data is stored securely on Firebase servers in compliance with Google's data protection standards.
-              </p>
-              <p>
-                By using CampusBite, you acknowledge that your data may be processed by Firebase/Google in accordance with their Privacy Policy.
-              </p>
-            </Section>
-
-            <Section title="5. Data Security">
-              <p>
-                We implement industry-standard security measures to protect your personal data. Access to user data is restricted to authorized personnel only. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
-              </p>
-            </Section>
-
-            <Section title="6. Data Retention">
-              <p>
-                We retain your personal data only for as long as necessary to provide our services or as required by applicable laws. You may request deletion of your account and associated data by contacting us.
-              </p>
-            </Section>
-
-            <Section title="7. Your Rights">
-              <p>You have the right to:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>Access the personal data we hold about you</li>
-                <li>Request correction of inaccurate data</li>
-                <li>Request deletion of your account and data</li>
-                <li>Withdraw consent for data processing (which may affect service availability)</li>
-              </ul>
-            </Section>
-
-            <Section title="8. Contact Us">
-              <p>
-                If you have any questions about this Privacy Policy or how your data is handled, please contact us at:
-              </p>
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mt-3">
-                <p className="text-sm font-semibold text-gray-800">CampusBite Support</p>
-                <p className="text-sm text-gray-600">Email: <a href="mailto:support.campusbite@gmail.com" className="text-orange-600 hover:underline">support.campusbite@gmail.com</a></p>
-                <p className="text-sm text-gray-600">Phone: +91 8957833269</p>
-              </div>
-            </Section>
-          </div>
-        </div>
-      </div>
-    </Layout>
+    <LegalPage
+      badge="Privacy Policy"
+      title="Privacy Policy"
+      description="This Privacy Policy explains how CampusBite collects, uses, stores, and protects user information when students and campus vendors use our platform."
+      updatedAt="May 2026"
+      sections={[
+        {
+          title: "1. Introduction",
+          content: [
+            "CampusBite is a campus food ordering platform that helps students order food from campus vendors, reduce waiting time, and manage pickup more efficiently.",
+            "This Privacy Policy explains how we collect, use, store, and protect your information when you use our website, app, or services.",
+          ],
+        },
+        {
+          title: "2. Information We Collect",
+          content: [
+            "We may collect personal information such as your name, email address, phone number, university or campus details, user role, and account information required to provide CampusBite services.",
+            "We may also collect order-related information including food items, quantity, price, pickup slot, order status, vendor/shop details, and order history.",
+          ],
+        },
+        {
+          title: "3. Payment Information",
+          content: [
+            "CampusBite may collect limited payment-related information such as payment status, UPI payer name, transaction reference, payment screenshot, or confirmation details required for order verification.",
+            "CampusBite does not store sensitive bank account details, UPI PINs, card numbers, CVV, or payment passwords.",
+          ],
+        },
+        {
+          title: "4. Device and Usage Information",
+          content: [
+            "We may collect basic device and usage information such as device type, operating system, app activity, login status, crash logs, and technical data to improve reliability, security, and user experience.",
+          ],
+        },
+        {
+          title: "5. Firebase and Backend Usage",
+          content: [
+            "CampusBite uses Firebase and backend services for authentication, database storage, order management, vendor management, notifications, and app functionality.",
+            "Your data may be stored securely on cloud infrastructure provided by trusted third-party service providers such as Google Firebase.",
+          ],
+        },
+        {
+          title: "6. Permissions",
+          content: [
+            "CampusBite may request permissions such as notification, phone, contact, or internet access only when required for specific app features such as order updates, support, communication, or account verification.",
+            "Users can manage app permissions from their device settings.",
+          ],
+        },
+        {
+          title: "7. How We Use Your Information",
+          content: [
+            "We use collected information to create and manage accounts, process orders, verify payments, show order status, support vendors, provide customer support, improve service quality, and prevent misuse of the platform.",
+            "We do not sell, rent, or trade your personal information to third parties for marketing purposes.",
+          ],
+        },
+        {
+          title: "8. Data Security",
+          content: [
+            "We take reasonable technical and organizational measures to protect user data from unauthorized access, misuse, loss, or alteration.",
+            "However, no digital platform can guarantee absolute security, and users are responsible for keeping their login credentials safe.",
+          ],
+        },
+        {
+          title: "9. Data Retention",
+          content: [
+            "We retain user data only as long as necessary to provide our services, resolve disputes, comply with legal requirements, prevent misuse, or improve platform operations.",
+            "Users may request deletion of their account and associated data by contacting CampusBite support.",
+          ],
+        },
+        {
+          title: "10. User Rights",
+          content: [
+            "Users may request access, correction, or deletion of their personal information by contacting CampusBite support.",
+            "Certain data may be retained where required for legal, security, payment verification, dispute resolution, or operational purposes.",
+          ],
+        },
+        {
+          title: "11. Policy Updates",
+          content: [
+            "CampusBite may update this Privacy Policy from time to time. Updated versions will be posted on this page with a revised update date.",
+            "Continued use of CampusBite after policy updates means you accept the updated Privacy Policy.",
+          ],
+        },
+        {
+          title: "12. Contact Us",
+          content: [
+            "If you have any questions about this Privacy Policy or how your data is handled, contact us at support.campusbite@gmail.com.",
+          ],
+        },
+      ]}
+    />
   );
 }

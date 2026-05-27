@@ -1,105 +1,97 @@
-import Layout from '../components/Layout';
+import LegalPage from "../components/LegalPage";
 
-function Section({ title, children }) {
+export default function RefundCancellationPolicy() {
   return (
-    <div className="mb-8">
-      <h2 className="font-heading text-xl font-bold text-gray-900 mb-3">{title}</h2>
-      <div className="text-gray-600 leading-relaxed space-y-3">{children}</div>
-    </div>
-  );
-}
-
-export default function RefundPolicy() {
-  return (
-    <Layout
-      title="Refund & Cancellation Policy – CampusBite"
-      description="Understand CampusBite's refund and cancellation policy for food orders placed on our platform."
-    >
-      <div className="min-h-screen bg-gray-50 pt-24 pb-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12">
-            <div className="mb-10 pb-8 border-b border-gray-100">
-              <div className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                Legal
-              </div>
-              <h1 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Refund & Cancellation Policy</h1>
-              <p className="text-sm text-gray-400">Last updated: June 2025</p>
-            </div>
-
-            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8">
-              <p className="text-sm text-amber-800 font-medium leading-relaxed">
-                <strong>Important Notice:</strong> CampusBite is a platform that connects users with campus food vendors. Since payments on CampusBite are primarily QR-based and made directly to the vendor, refunds are handled in coordination with the respective vendor.
-              </p>
-            </div>
-
-            <Section title="1. Order Cancellation">
-              <ul className="list-disc pl-5 space-y-2 text-sm">
-                <li>Users may request order cancellation <strong>before the vendor begins food preparation</strong>. Once preparation has started, cancellation may not be possible.</li>
-                <li>To cancel an order, users should contact the vendor directly or reach out to CampusBite support immediately.</li>
-                <li>CampusBite cannot guarantee cancellation acceptance once the order has been confirmed by the vendor.</li>
-                <li>Repeated cancellations after confirmation may result in suspension of the user's account.</li>
-              </ul>
-            </Section>
-
-            <Section title="2. Refund Eligibility">
-              <p>Refunds may be considered in the following situations:</p>
-              <ul className="list-disc pl-5 space-y-2 text-sm">
-                <li>The vendor confirms the order cannot be fulfilled (e.g., item unavailability after payment).</li>
-                <li>Incorrect order preparation confirmed by the vendor.</li>
-                <li>Duplicate or accidental payment made by the user, with proof of transaction.</li>
-                <li>Technical error on the platform that led to incorrect charging.</li>
-              </ul>
-              <p className="text-sm">
-                Refunds are <strong>not guaranteed</strong> simply by request and are subject to vendor confirmation and investigation.
-              </p>
-            </Section>
-
-            <Section title="3. QR-Based Payment Refunds">
-              <ul className="list-disc pl-5 space-y-2 text-sm">
-                <li>Since payments are made directly to the vendor's UPI/QR code, the refund must be initiated by the vendor to the user's original payment source.</li>
-                <li>CampusBite does not directly process or hold payments and therefore cannot independently initiate refunds for QR-based transactions.</li>
-                <li>Users should retain their payment screenshot or UTR number as proof for any refund request.</li>
-                <li>CampusBite support will act as a coordinator between the user and vendor to facilitate refund resolution.</li>
-              </ul>
-            </Section>
-
-            <Section title="4. Refund Process">
-              <p>To request a refund, please follow these steps:</p>
-              <ol className="list-decimal pl-5 space-y-2 text-sm">
-                <li>Contact the vendor at the outlet directly, explaining the issue.</li>
-                <li>If unresolved, reach out to CampusBite support with:
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
-                    <li>Your order details (outlet name, items, date/time)</li>
-                    <li>Payment screenshot or UTR number</li>
-                    <li>Description of the issue</li>
-                  </ul>
-                </li>
-                <li>Our team will review the case and coordinate with the vendor.</li>
-                <li>Resolution timeline depends on vendor cooperation and typically takes 3–7 business days.</li>
-              </ol>
-            </Section>
-
-            <Section title="5. Non-Refundable Cases">
-              <p>Refunds will generally NOT be processed in the following cases:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>User placed the order by mistake but food preparation has already started.</li>
-                <li>User failed to pick up the order within the designated pickup slot.</li>
-                <li>User provided incorrect order details and the vendor prepared as instructed.</li>
-                <li>Taste or personal preference dissatisfaction (not a quality defect).</li>
-              </ul>
-            </Section>
-
-            <Section title="6. Contact for Refund Support">
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4">
-                <p className="text-sm font-semibold text-gray-800 mb-2">CampusBite Support Team</p>
-                <p className="text-sm text-gray-600">📧 Email: <a href="mailto:support.campusbite@gmail.com" className="text-orange-600 hover:underline">support.campusbite@gmail.com</a></p>
-                <p className="text-sm text-gray-600">📞 Phone / WhatsApp: <a href="tel:+918957833269" className="text-orange-600 hover:underline">+91 8957833269</a></p>
-                <p className="text-sm text-gray-500 mt-2">Please mention "Refund Request" in your subject line for faster resolution.</p>
-              </div>
-            </Section>
-          </div>
-        </div>
-      </div>
-    </Layout>
+    <LegalPage
+      badge="Refund Policy"
+      title="Refund & Cancellation Policy"
+      description="This policy explains how refunds and cancellation-related cases are handled in the current MVP version of CampusBite."
+      updatedAt="May 2026"
+      sections={[
+        {
+          title: "1. Current Cancellation Availability",
+          content: [
+            "In the current MVP version of CampusBite, users do not have a direct in-app option to cancel an order after placing it.",
+            "Users should carefully review their selected items, quantity, pickup slot, total amount, and payment details before confirming an order.",
+            "If a user faces an urgent issue after placing an order, they may contact CampusBite support or the respective vendor, but cancellation is not guaranteed.",
+          ],
+        },
+        {
+          title: "2. No Cancellation After Order Processing Starts",
+          content: [
+            "Once an order has been placed and the vendor has accepted it or started preparing the food, cancellation may not be possible.",
+            "Food preparation involves vendor time, ingredients, and operational cost, so orders cannot always be reversed after processing begins.",
+          ],
+        },
+        {
+          title: "3. Refund Eligibility",
+          content: [
+            "A refund may be considered if payment is deducted but the order is not successfully created in the CampusBite system due to a technical issue.",
+            "Refund may also be considered in cases of duplicate payment, accidental payment, failed order creation, or confirmed technical failure.",
+            "Refund approval depends on payment proof, order status, vendor confirmation, and verification by CampusBite support.",
+          ],
+        },
+        {
+          title: "4. Payment Deducted but Order Not Placed",
+          content: [
+            "If payment is deducted but the order does not appear in CampusBite, the user should contact support with valid payment proof.",
+            "CampusBite will verify the issue and assist with refund coordination where applicable.",
+            "Users should share details such as registered phone number, vendor/shop name, payment screenshot, UPI reference or UTR number, amount, and transaction time.",
+          ],
+        },
+        {
+          title: "5. QR-Based or UPI Payments",
+          content: [
+            "In the current MVP version, payments may be made directly to the vendor through QR code or UPI.",
+            "Since payment may go directly to the vendor, the refund may need to be processed by the respective vendor.",
+            "CampusBite may help coordinate between the user and vendor, but CampusBite may not directly hold or control vendor-received payments.",
+            "Users should keep payment screenshots, UTR number, payer name, order details, and transaction time for verification.",
+          ],
+        },
+        {
+          title: "6. No Refund Cases",
+          content: [
+            "Refund may not be provided after the vendor has accepted the order and started preparing the food.",
+            "Refund may not be applicable for incorrect orders placed by the user, wrong pickup slot selection, failure to collect the order on time, or change of mind after placing the order.",
+            "Taste preference, personal dissatisfaction, or delays caused by user-side issues may not always qualify for refund.",
+          ],
+        },
+        {
+          title: "7. Vendor-Related Issues",
+          content: [
+            "If a vendor is unable to fulfill an accepted order, CampusBite may help coordinate a resolution between the user and vendor.",
+            "Refund or replacement decisions may depend on vendor confirmation, food preparation status, payment verification, and the nature of the issue.",
+          ],
+        },
+        {
+          title: "8. Technical Failure Refund Clause",
+          content: [
+            "If payment is deducted due to a technical failure but the order is not successfully placed, users should contact CampusBite support as soon as possible.",
+            "CampusBite will review the technical issue and assist with refund processing or coordination where applicable.",
+          ],
+        },
+        {
+          title: "9. Refund Timeline",
+          content: [
+            "Refund timelines may depend on the payment provider, bank, UPI platform, or vendor involved.",
+            "Approved refunds may take several business days to reflect in the user's account.",
+            "CampusBite cannot guarantee exact bank, UPI, payment provider, or vendor processing timelines.",
+          ],
+        },
+        {
+          title: "10. How to Request Refund Support",
+          content: [
+            "To request refund support, contact support.campusbite@gmail.com with your name, registered phone number, order details, vendor/shop name, payment proof, UPI reference or UTR number if available, and a clear description of the issue.",
+            "Please mention 'Refund Request' in your email subject for faster support.",
+          ],
+        },
+        {
+          title: "11. Contact Us",
+          content: [
+            "For refund-related support, contact CampusBite at support.campusbite@gmail.com.",
+          ],
+        },
+      ]}
+    />
   );
 }

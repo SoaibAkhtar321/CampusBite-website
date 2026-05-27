@@ -1,111 +1,117 @@
-import Layout from '../components/Layout';
+import LegalPage from "../components/LegalPage";
 
-function Section({ title, children }) {
+export default function TermsAndConditions() {
   return (
-    <div className="mb-8">
-      <h2 className="font-heading text-xl font-bold text-gray-900 mb-3">{title}</h2>
-      <div className="text-gray-600 leading-relaxed space-y-3">{children}</div>
-    </div>
-  );
-}
-
-export default function Terms() {
-  return (
-    <Layout
-      title="Terms & Conditions – CampusBite"
-      description="Read CampusBite's terms and conditions governing use of our smart dining platform."
-    >
-      <div className="min-h-screen bg-gray-50 pt-24 pb-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12">
-            <div className="mb-10 pb-8 border-b border-gray-100">
-              <div className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                Legal
-              </div>
-              <h1 className="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Terms & Conditions</h1>
-              <p className="text-sm text-gray-400">Last updated: June 2025</p>
-            </div>
-
-            <Section title="1. Acceptance of Terms">
-              <p>
-                By downloading, accessing, or using the CampusBite application or website ("Platform"), you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our services.
-              </p>
-            </Section>
-
-            <Section title="2. About CampusBite">
-              <p>
-                CampusBite is a smart dining and queue management platform designed for closed-campus ecosystems. CampusBite connects users with internal food vendors (canteens, cafes, mess, snack shops, etc.) operating within a campus. CampusBite acts as a facilitator and is not directly responsible for food preparation, quality, or fulfillment.
-              </p>
-            </Section>
-
-            <Section title="3. Vendor Responsibility">
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>The food vendor or outlet is solely responsible for food preparation, quality, hygiene, and timely fulfillment of orders.</li>
-                <li>CampusBite does not prepare, handle, or deliver food items.</li>
-                <li>Any disputes related to food quality, incorrect orders, or preparation should be addressed directly with the vendor in the first instance.</li>
-                <li>CampusBite may assist in dispute coordination but cannot guarantee resolution outcomes.</li>
-              </ul>
-            </Section>
-
-            <Section title="4. User Obligations">
-              <p>As a user of CampusBite, you agree to:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>Provide accurate and correct order, contact, and payment details at all times.</li>
-                <li>Collect your order within the designated pickup slot/time. Missed pickups are the user's responsibility.</li>
-                <li>Not misuse the platform for fraudulent orders, fake payments, or any unlawful purpose.</li>
-                <li>Be respectful toward vendors and campus staff.</li>
-              </ul>
-            </Section>
-
-            <Section title="5. Payments">
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>Payments on CampusBite may be facilitated through QR-based UPI payments at the vendor's shop or through other available payment options.</li>
-                <li>Payment verification is conducted by the vendor at the time of order confirmation.</li>
-                <li>Users must ensure payments are completed correctly before their order is considered confirmed.</li>
-                <li>CampusBite does not store payment card details. UPI payment references (UTR) may be stored for verification and dispute resolution purposes.</li>
-              </ul>
-            </Section>
-
-            <Section title="6. Order Cancellations">
-              <p>
-                Please refer to our Refund & Cancellation Policy for details on order cancellations. Once food preparation has begun, cancellations may not be accepted.
-              </p>
-            </Section>
-
-            <Section title="7. Intellectual Property">
-              <p>
-                All content, branding, and technology on the CampusBite platform, including the name, logo, design, and software, are the intellectual property of CampusBite and its founders. Unauthorized reproduction or use is prohibited.
-              </p>
-            </Section>
-
-            <Section title="8. Limitation of Liability">
-              <p>
-                CampusBite is provided on an "as-is" basis. To the maximum extent permitted by law, CampusBite shall not be liable for any indirect, incidental, or consequential damages arising from:
-              </p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm">
-                <li>Food quality or vendor non-fulfillment</li>
-                <li>Technical downtime or service interruptions</li>
-                <li>Payment disputes between user and vendor</li>
-                <li>Loss of data due to circumstances beyond our control</li>
-              </ul>
-            </Section>
-
-            <Section title="9. Modifications">
-              <p>
-                CampusBite reserves the right to update or modify these Terms at any time. Continued use of the platform after changes constitutes acceptance of the revised Terms.
-              </p>
-            </Section>
-
-            <Section title="10. Contact">
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4">
-                <p className="text-sm font-semibold text-gray-800">CampusBite Support</p>
-                <p className="text-sm text-gray-600">Email: <a href="mailto:support.campusbite@gmail.com" className="text-orange-600 hover:underline">support.campusbite@gmail.com</a></p>
-                <p className="text-sm text-gray-600">Phone: +91 8957833269</p>
-              </div>
-            </Section>
-          </div>
-        </div>
-      </div>
-    </Layout>
+    <LegalPage
+      badge="Terms & Conditions"
+      title="Terms & Conditions"
+      description="These Terms & Conditions govern the use of CampusBite by students, vendors, and other users of the platform."
+      updatedAt="May 2026"
+      sections={[
+        {
+          title: "1. Acceptance of Terms",
+          content: [
+            "By accessing or using CampusBite, you agree to follow these Terms & Conditions. If you do not agree with these terms, you should not use the platform.",
+          ],
+        },
+        {
+          title: "2. About CampusBite",
+          content: [
+            "CampusBite is a campus food ordering platform that connects students with campus food vendors such as canteens, cafes, mess counters, and snack shops.",
+            "CampusBite helps users place food orders, select pickup slots, reduce queues, and manage campus food ordering more efficiently.",
+          ],
+        },
+        {
+          title: "3. Accurate Information",
+          content: [
+            "Users must provide accurate and complete information during registration, ordering, payment confirmation, and communication.",
+            "CampusBite may restrict or block accounts that provide false, misleading, incomplete, or fraudulent information.",
+          ],
+        },
+        {
+          title: "4. Platform Role",
+          content: [
+            "CampusBite acts only as a platform connecting students with campus food vendors.",
+            "CampusBite does not directly prepare, cook, package, or deliver food items.",
+            "Food preparation, pricing, menu accuracy, hygiene, availability, and order fulfillment are the responsibility of the respective vendor.",
+          ],
+        },
+        {
+          title: "5. Vendor Responsibility",
+          content: [
+            "Vendors are responsible for preparing food, accepting or rejecting orders, managing menu items, maintaining shop timings, and handing over orders to users.",
+            "Any issue related to food taste, quality, ingredients, hygiene, incorrect items, or preparation delay should be addressed with the vendor first.",
+            "CampusBite may help coordinate support but cannot guarantee a specific resolution in every vendor-related dispute.",
+          ],
+        },
+        {
+          title: "6. User Responsibilities",
+          content: [
+            "Users must review order details carefully before placing an order.",
+            "Users are responsible for selecting the correct food items, quantity, pickup slot, and payment information.",
+            "Users should collect their order within the selected pickup slot or as instructed by the vendor.",
+            "Users must not misuse the platform for fake orders, spam, abusive behavior, fraudulent payment claims, or any unlawful activity.",
+          ],
+        },
+        {
+          title: "7. Orders and Cancellation",
+          content: [
+            "Orders once placed may not always be cancellable, especially if the vendor has accepted the order or started food preparation.",
+            "Cancellation availability may depend on order status, vendor confirmation, and operational conditions.",
+            "Users should refer to the Refund & Cancellation Policy for more details.",
+          ],
+        },
+        {
+          title: "8. Payments",
+          content: [
+            "Users are responsible for completing payments correctly using the available payment method.",
+            "For QR-based or UPI payments, users must ensure payment is made to the correct vendor account and provide correct payment confirmation details when required.",
+            "Payment verification may be required before the vendor prepares or hands over the order.",
+            "CampusBite does not store sensitive bank details, UPI PINs, card numbers, CVV, or payment passwords.",
+          ],
+        },
+        {
+          title: "9. Misuse and Account Blocking",
+          content: [
+            "CampusBite may temporarily or permanently block users, vendors, or accounts involved in fake orders, spam activity, abusive behavior, repeated misuse, fraudulent payments, or violation of these terms.",
+            "CampusBite may also restrict access if an account creates operational, security, or trust-related issues for the platform.",
+          ],
+        },
+        {
+          title: "10. Service Availability",
+          content: [
+            "CampusBite service availability may vary depending on campus, vendor availability, shop timings, internet connectivity, technical issues, maintenance, or operational conditions.",
+            "We do not guarantee uninterrupted, error-free, or always-available service.",
+          ],
+        },
+        {
+          title: "11. Intellectual Property",
+          content: [
+            "The CampusBite name, logo, branding, website design, app design, content, and software are owned by CampusBite or its founders unless otherwise stated.",
+            "Users may not copy, reproduce, modify, distribute, or misuse CampusBite branding, content, or software without permission.",
+          ],
+        },
+        {
+          title: "12. Limitation of Liability",
+          content: [
+            "CampusBite is not responsible for indirect, incidental, or consequential damages arising from vendor issues, food quality concerns, service interruptions, user mistakes, payment provider delays, or technical failures.",
+            "CampusBite’s role is limited to providing a digital platform for campus food ordering and support coordination.",
+          ],
+        },
+        {
+          title: "13. Changes to Terms",
+          content: [
+            "CampusBite may update these Terms & Conditions from time to time. Updated versions will be posted on this page with a revised update date.",
+            "Continued use of CampusBite after updates means you accept the updated terms.",
+          ],
+        },
+        {
+          title: "14. Contact Us",
+          content: [
+            "For questions about these Terms & Conditions, contact CampusBite support at support.campusbite@gmail.com.",
+          ],
+        },
+      ]}
+    />
   );
 }
