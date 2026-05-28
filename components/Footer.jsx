@@ -25,17 +25,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 shadow-md shadow-orange-900/30">
-                <span className="font-heading text-lg font-bold text-white">
-                  CB
-                </span>
-              </div>
+            <Link href="/" className="mb-4 flex w-fit items-center gap-3">
+              <img
+                src="/campusbite-logo.png"
+                alt="CampusBite logo"
+                className="h-11 w-11 rounded-xl shadow-md shadow-orange-900/30"
+              />
 
-              <span className="font-heading text-xl font-bold">
+              <span className="font-heading text-xl font-bold tracking-tight">
                 Campus<span className="text-orange-400">Bite</span>
               </span>
-            </div>
+            </Link>
 
             <p className="max-w-md text-sm leading-6 text-gray-400">
               CampusBite is a campus food ordering platform that helps students
