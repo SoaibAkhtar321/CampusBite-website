@@ -1,48 +1,68 @@
-import Layout from '../components/Layout';
-import Link from 'next/link';
+import Head from "next/head";
 
-export default function Contact() {
+export default function ContactUs() {
   return (
-    <Layout
-      title="Contact – CampusBite"
-      description="Reach out to CampusBite for partnership, support, or general inquiries."
-    >
-      <div className="min-h-screen bg-orange-50 pt-24 pb-20 px-4">
-        <div className="max-w-4xl mx-auto">
+    <>
+      <Head>
+        <title>Contact Us | CampusBite</title>
+        <meta
+          name="description"
+          content="Contact CampusBite support for partnerships, orders, payments, refunds, vendors, and campus food ordering support."
+        />
+      </Head>
+
+      <section className="min-h-screen bg-orange-50 px-4 pb-20 pt-28">
+        <div className="mx-auto max-w-4xl">
           {/* Header */}
-          <div className="text-center mb-14">
-            <div className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">
+          <div className="mb-14 text-center">
+            <div className="mb-4 inline-block rounded-full bg-orange-100 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-orange-700">
               Get In Touch
             </div>
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+
+            <h1 className="mb-4 font-heading text-4xl font-bold text-gray-900 sm:text-5xl">
               Contact CampusBite
             </h1>
-            <p className="text-gray-500 max-w-lg mx-auto">
-              Whether you want to partner with us, have a query, or need support — we'd love to hear from you.
+
+            <p className="mx-auto max-w-lg text-gray-500">
+              Whether you want to partner with us, have a query, or need support,
+              we would love to hear from you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Contact Cards */}
             <div className="space-y-5">
-              <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-xl">👤</div>
+              <div className="rounded-2xl border border-gray-100 bg-white p-7 shadow-sm">
+                <div className="mb-3 flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-xl">
+                    👤
+                  </div>
+
                   <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Founder</p>
-                    <p className="font-heading font-bold text-gray-900 text-lg">Soaib Akhtar</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                      Founder
+                    </p>
+                    <p className="font-heading text-lg font-bold text-gray-900">
+                      Soaib Akhtar
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
-                <div className="flex items-center gap-4 mb-1">
-                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-xl">✉️</div>
+              <div className="rounded-2xl border border-gray-100 bg-white p-7 shadow-sm">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-xl">
+                    ✉️
+                  </div>
+
                   <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">Email Us</p>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                      Email Us
+                    </p>
+
                     <a
                       href="mailto:support.campusbite@gmail.com"
-                      className="font-semibold text-orange-600 hover:text-orange-700 transition-colors break-all"
+                      className="break-all font-semibold text-orange-600 transition-colors hover:text-orange-700"
                     >
                       support.campusbite@gmail.com
                     </a>
@@ -50,14 +70,20 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+              <div className="rounded-2xl border border-gray-100 bg-white p-7 shadow-sm">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-xl">📞</div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100 text-xl">
+                    📞
+                  </div>
+
                   <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1">Call / WhatsApp</p>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                      Call / WhatsApp
+                    </p>
+
                     <a
                       href="tel:+918957833269"
-                      className="font-semibold text-orange-600 hover:text-orange-700 transition-colors"
+                      className="font-semibold text-orange-600 transition-colors hover:text-orange-700"
                     >
                       +91 8957833269
                     </a>
@@ -65,52 +91,72 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-orange-500 rounded-2xl p-7 text-white">
-                <h3 className="font-heading font-bold text-lg mb-2">Want to Partner?</h3>
-                <p className="text-orange-100 text-sm leading-relaxed mb-4">
-                  If you run a canteen, cafe, or food outlet on a campus, we'd love to onboard you. Reach out and let's discuss.
+              <div className="rounded-2xl bg-orange-500 p-7 text-white">
+                <h3 className="mb-2 font-heading text-lg font-bold">
+                  Want to Partner?
+                </h3>
+
+                <p className="mb-4 text-sm leading-relaxed text-orange-100">
+                  If you run a canteen, cafe, or food outlet on a campus, we
+                  would love to onboard you. Reach out and let us discuss.
                 </p>
+
                 <a
                   href="mailto:support.campusbite@gmail.com?subject=Partnership%20Inquiry%20-%20CampusBite"
-                  className="inline-flex items-center gap-2 bg-white text-orange-600 font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-50 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-orange-600 transition-colors hover:bg-orange-50"
                 >
                   Send Partnership Request →
                 </a>
               </div>
             </div>
 
-            {/* Info block */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h2 className="font-heading font-bold text-xl text-gray-900 mb-5">Frequently Asked</h2>
+            {/* FAQ Block */}
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h2 className="mb-5 font-heading text-xl font-bold text-gray-900">
+                Frequently Asked
+              </h2>
+
               <div className="space-y-6">
                 {[
                   {
-                    q: 'When is the app launching?',
-                    a: 'CampusBite is currently in development. Follow us or sign up to get notified when we launch in your region.',
+                    q: "What is CampusBite?",
+                    a: "CampusBite is a campus food ordering platform that helps students order food from campus vendors, reduce waiting time, and manage pickup more easily.",
                   },
                   {
-                    q: 'Which campuses can use CampusBite?',
-                    a: 'Any closed-campus ecosystem — colleges, universities, hostels, corporate campuses, hospitals, and society campuses.',
+                    q: "When is the app launching?",
+                    a: "CampusBite is currently in MVP development and testing. We are preparing it for campus-level launch and Play Store release.",
                   },
                   {
-                    q: 'How do I register my food outlet?',
-                    a: 'Reach out to us at support.campusbite@gmail.com or call us. Our team will guide you through the vendor onboarding process.',
+                    q: "Which campuses can use CampusBite?",
+                    a: "CampusBite is designed for colleges, universities, hostels, corporate campuses, hospitals, and other closed-campus food ecosystems.",
                   },
                   {
-                    q: 'Is there a fee to partner?',
-                    a: 'Onboarding details and pricing will be shared during the partnership discussion. Contact us to know more.',
+                    q: "How do I register my food outlet?",
+                    a: "Reach out to us at support.campusbite@gmail.com or call us. Our team will guide you through the vendor onboarding process.",
                   },
-                ].map((faq, i) => (
-                  <div key={i} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0">
-                    <p className="font-semibold text-gray-900 mb-1.5 text-sm">{faq.q}</p>
-                    <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
+                  {
+                    q: "How can I get support for an order or payment?",
+                    a: "Email us with your registered phone number, order details, payment proof, and a clear explanation of the issue.",
+                  },
+                ].map((faq, index) => (
+                  <div
+                    key={index}
+                    className="border-b border-gray-100 pb-5 last:border-0 last:pb-0"
+                  >
+                    <p className="mb-1.5 text-sm font-semibold text-gray-900">
+                      {faq.q}
+                    </p>
+
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      {faq.a}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </section>
+    </>
   );
 }
