@@ -3,92 +3,104 @@ import LegalPage from "../components/LegalPage";
 export default function RefundCancellationPolicy() {
   return (
     <LegalPage
-      badge="Refund Policy"
+      badge="Refund & Cancellation Policy"
       title="Refund & Cancellation Policy"
-      description="This policy explains how refunds and cancellation-related cases are handled in the current MVP version of CampusBite."
-      updatedAt="May 2026"
+      description="This policy explains how cancellations, payment verification, and manual refunds are handled on CampusBite for students, users, shopkeepers, and admins."
+      updatedAt="June 2026"
       sections={[
         {
-          title: "1. Current Cancellation Availability",
+          title: "1. Overview",
           content: [
-            "In the current MVP version of CampusBite, users do not have a direct in-app option to cancel an order after placing it.",
-            "Users should carefully review their selected items, quantity, pickup slot, total amount, and payment details before confirming an order.",
-            "If a user faces an urgent issue after placing an order, they may contact CampusBite support or the respective vendor, but cancellation is not guaranteed.",
+            "CampusBite helps users place pickup orders from campus shops and helps shopkeepers manage order fulfilment. This policy applies to orders placed through CampusBite.",
+            "CampusBite currently supports a scan-and-pay or manual UPI payment verification flow for MVP usage. This means the user may pay directly to the shopkeeper or vendor using the payment method shown for that shop.",
           ],
         },
         {
-          title: "2. No Cancellation After Order Processing Starts",
+          title: "2. CampusBite's Role in Payments",
           content: [
-            "Once an order has been placed and the vendor has accepted it or started preparing the food, cancellation may not be possible.",
-            "Food preparation involves vendor time, ingredients, and operational cost, so orders cannot always be reversed after processing begins.",
+            "CampusBite is currently not a payment gateway, wallet, escrow service, bank, or payment settlement provider. In the scan-and-pay flow, CampusBite may not directly receive, hold, or settle the user's money.",
+            "Payment verification may be handled manually by the shopkeeper based on UPI payer name, payment proof, or shopkeeper confirmation. Users should keep their UPI transaction screenshot or payment proof until the order is completed.",
           ],
         },
         {
-          title: "3. Refund Eligibility",
+          title: "3. User Cancellation",
           content: [
-            "A refund may be considered if payment is deducted but the order is not successfully created in the CampusBite system due to a technical issue.",
-            "Refund may also be considered in cases of duplicate payment, accidental payment, failed order creation, or confirmed technical failure.",
-            "Refund approval depends on payment proof, order status, vendor confirmation, and verification by CampusBite support.",
+            "A user should place an order only after checking the shop, menu item, price, pickup slot, and payment details carefully.",
+            "Once payment has been made and the order has been accepted or preparation has started, cancellation may not be available unless the shopkeeper agrees or the shop is unable to fulfil the order.",
+            "If a user does not complete payment, the order may remain pending or may be cancelled by the shopkeeper.",
           ],
         },
         {
-          title: "4. Payment Deducted but Order Not Placed",
+          title: "4. Shopkeeper Cancellation Before Payment",
           content: [
-            "If payment is deducted but the order does not appear in CampusBite, the user should contact support with valid payment proof.",
-            "CampusBite will verify the issue and assist with refund coordination where applicable.",
-            "Users should share details such as registered phone number, vendor/shop name, payment screenshot, UPI reference or UTR number, amount, and transaction time.",
+            "If the shopkeeper has not received payment, the shopkeeper may cancel the order as payment not received.",
+            "In such cases, no refund is applicable through CampusBite because payment was not confirmed as received by the shopkeeper.",
           ],
         },
         {
-          title: "5. QR-Based or UPI Payments",
+          title: "5. Shopkeeper Cancellation After Payment",
           content: [
-            "In the current MVP version, payments may be made directly to the vendor through QR code or UPI.",
-            "Since payment may go directly to the vendor, the refund may need to be processed by the respective vendor.",
-            "CampusBite may help coordinate between the user and vendor, but CampusBite may not directly hold or control vendor-received payments.",
-            "Users should keep payment screenshots, UTR number, payer name, order details, and transaction time for verification.",
+            "If the shopkeeper has received full or partial payment but cannot fulfil the order, the shopkeeper must select the correct payment received status and cancellation reason in the CampusBite shopkeeper panel.",
+            "Reasons may include item or menu unavailable, shop emergency, gas or electricity issue, shop closing unexpectedly, or other operational issues.",
+            "When payment has been received and the order is cancelled by the shopkeeper, the order may be marked as refund pending. The shopkeeper is responsible for manually settling the refund with the user.",
           ],
         },
         {
-          title: "6. No Refund Cases",
+          title: "6. Refund Responsibility",
           content: [
-            "Refund may not be provided after the vendor has accepted the order and started preparing the food.",
-            "Refund may not be applicable for incorrect orders placed by the user, wrong pickup slot selection, failure to collect the order on time, or change of mind after placing the order.",
-            "Taste preference, personal dissatisfaction, or delays caused by user-side issues may not always qualify for refund.",
+            "If payment was received by the shopkeeper and the order could not be fulfilled due to shopkeeper-side or shop-side reasons, the shopkeeper is responsible for refunding the user.",
+            "If the menu item was unavailable but the shopkeeper forgot to mark it unavailable, or if the shop or slot was open but the shopkeeper could not fulfil the order, the shopkeeper remains responsible for resolving the refund if payment was received.",
+            "CampusBite may show refund pending orders to the shopkeeper and admin for tracking and support, but CampusBite may not directly process the refund unless a payment gateway or wallet flow is introduced in the future.",
           ],
         },
         {
-          title: "7. Vendor-Related Issues",
+          title: "7. Refund Settlement Process",
           content: [
-            "If a vendor is unable to fulfill an accepted order, CampusBite may help coordinate a resolution between the user and vendor.",
-            "Refund or replacement decisions may depend on vendor confirmation, food preparation status, payment verification, and the nature of the issue.",
+            "When a paid order is cancelled, the user will be able to see the cancellation reason and refund pending status in the app. The user may call the shopkeeper if required.",
+            "The shopkeeper should refund the user manually using a suitable payment method and then mark the refund as settled in the CampusBite shopkeeper panel with a refund reference ID or note.",
+            "Once the shopkeeper marks the refund as settled, the user may see the refund settled status. If the user has not actually received the refund, the user should contact the shopkeeper and CampusBite support with payment proof.",
           ],
         },
         {
-          title: "8. Technical Failure Refund Clause",
+          title: "8. Expected Refund Time",
           content: [
-            "If payment is deducted due to a technical failure but the order is not successfully placed, users should contact CampusBite support as soon as possible.",
-            "CampusBite will review the technical issue and assist with refund processing or coordination where applicable.",
+            "Because the current MVP uses manual UPI or scan-and-pay verification, refund timing depends on the shopkeeper's manual settlement. Shopkeepers are expected to settle valid refunds as soon as reasonably possible.",
+            "CampusBite recommends that shopkeepers settle valid refund pending orders on the same day where possible, or within a reasonable operational timeframe.",
           ],
         },
         {
-          title: "9. Refund Timeline",
+          title: "9. User Responsibilities for Refund Support",
           content: [
-            "Refund timelines may depend on the payment provider, bank, UPI platform, or vendor involved.",
-            "Approved refunds may take several business days to reflect in the user's account.",
-            "CampusBite cannot guarantee exact bank, UPI, payment provider, or vendor processing timelines.",
+            "Users must provide a correct and reachable phone number in their CampusBite profile. If the user provides an incorrect or invalid phone number, CampusBite and the shopkeeper may not be able to contact the user for refund support.",
+            "Users must keep valid payment proof such as UPI transaction screenshot, transaction ID, payer name, date, time, and amount. Without payment proof, refund support may be limited.",
+            "If the user pays to the wrong UPI ID, pays outside the CampusBite shown shop payment method, or pays without confirming the shop details, refund support may be difficult and will depend on the facts of the case.",
           ],
         },
         {
-          title: "10. How to Request Refund Support",
+          title: "10. Non-Refundable or Limited Support Cases",
           content: [
-            "To request refund support, contact support.campusbite@gmail.com with your name, registered phone number, order details, vendor/shop name, payment proof, UPI reference or UTR number if available, and a clear description of the issue.",
-            "Please mention 'Refund Request' in your email subject for faster support.",
+            "Refund may not be applicable where payment was not received by the shopkeeper, the user failed to pay, the user did not collect the order after it was prepared, the user entered an incorrect phone number and cannot be contacted, or the user cannot provide payment proof.",
+            "Refund support may also be limited where the payment was made outside the CampusBite order flow, to an incorrect recipient, or in a manner that cannot be verified by the shopkeeper or CampusBite.",
           ],
         },
         {
-          title: "11. Contact Us",
+          title: "11. Disputes",
           content: [
-            "For refund-related support, contact CampusBite at support.campusbite@gmail.com.",
+            "If there is a dispute between a user and a shopkeeper regarding payment or refund, CampusBite may review order data, payment status, refund status, cancellation reason, and communication details available on the platform.",
+            "CampusBite may assist in coordination, but final manual refund settlement in the current MVP scan-and-pay flow remains the responsibility of the shopkeeper who received the payment.",
+          ],
+        },
+        {
+          title: "12. Policy Updates",
+          content: [
+            "CampusBite may update this Refund & Cancellation Policy as the platform evolves, especially if online payment gateway, wallet, automated refund, or escrow-based payment flows are introduced.",
+            "Updated versions will be posted on this page with the revised update date.",
+          ],
+        },
+        {
+          title: "13. Contact",
+          content: [
+            "For refund or cancellation support, contact CampusBite at support.campusbite@gmail.com with your order ID, phone number, payment proof, transaction ID, and a clear description of the issue.",
           ],
         },
       ]}
